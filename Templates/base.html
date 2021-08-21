@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+
+<head>
+    
+    <title>EBSB IITBHILAI</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="footer, address, phone, icons" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="static/css/mystyle.css">
+ <script src="jquery-2.1.4.js"></script>
+<link rel="icon" href="static/images/1.png">
+<link rel="stylesheet" type="text/css" href="/static/manam/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/manam/font-awesome/css/font-awesome.min.css"/>
+
+    <script type="text/javascript" src="static/manam/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="static/manam/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    .loader {
+            width: 25%;
+            height: 25%;
+            z-index: 9999;
+            background-color: #ffffffcf;
+        }
+        .loader img{
+            position: fixed;
+            left: 40%;
+            top: 20%;
+            margin-left:-110px;
+        }
+</style>
+
+<div class="loader" ><img src="static/images/lloader.gif"></div>
+
+<script> 
+        document.onreadystatechange = function() { 
+            if (document.readyState !== "complete") { 
+                document.querySelector( 
+                  "body").style.visibility = "hidden"; 
+                document.querySelector( 
+                  ".loader").style.visibility = "visible"; 
+            } else { 
+                document.querySelector( 
+                  ".loader").style.display = "none"; 
+                document.querySelector( 
+                  "body").style.visibility = "visible"; 
+            } 
+        }; 
+    </script>
+<body>
+
+<nav>
+  <input id="nav-toggle" type="checkbox">
+  <div class="logo"> <a href="{{ url_for('index') }}"><img src="/static/images/u.png" width="230px" height="auto"></a>
+    </div>
+    <ul class="links">
+
+     <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('EBSB') }}">EBSB</a></li>
+        <li><a href="{{ url_for('Events') }}">Events</a></li>
+        <li><a href="{{ url_for('Team') }}">Team</a></li>
+    <li></li> 
+    </ul>
+    
+ 
+  <label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
+</nav>
+    {% block content %}
+    
+  {% endblock %}
+
+ <div class="footer" >
+   <div class="inner-footer">
+     <!-- footer -->
+
+     <div class="footer-items">
+       <h2 style="color: white;">About us</h2>
+       <div class="border"></div>
+       <ul>
+           <a href="{{ url_for('index') }}"><li>Home</li></a>
+           <a href="{{ url_for('EBSB') }}"><li>EBSB</li></a>
+           <a href="{{ url_for('Events') }}"><li>Events</li></a>
+           <a href="{{ url_for('Team') }}"><li>Team</li></a>
+       </ul>
+     </div>
+     <div class="footer-items">
+       <h2 style="color: white;">Quick Links</h2>
+       <div class="border"></div>
+       <ul>
+           <a href="https://www.iitbhilai.ac.in/" target="blank"><li>IIT BHILAI</li></a>
+           <a href="https://ekbharat.gov.in/" target="blank1"><li>EBSB Official Website</li></a>
+       </ul>
+     </div>
+  
+     <div class="footer-items">
+       <h2 style="color: white;">Contact us</h2>
+       <div class="border"></div>
+       <ul>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>Raipur Chattisgarh</li>
+          <a href="mailto:%20ebsbcoordinator@iitbhilai.ac.in" target="blank6"><li><i class="fa fa-envelope" aria-hidden="true"></i> ebsbcoordinator@iitbhilai.ac.in</li> </a>
+       
+       </ul>
+       <div class="social-media">
+        <a href=""><i id="f1" class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/IitEbsb?s=08" target="blank2"><i id="t1" class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/ebsbiitbhilai?igshid=a8uhtzmyynph" target="blank3"><i id="i1" class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UC7J_wxKd8cO_L1X7m09aXpA" target="blank4"><i id="y1" class="fa fa-youtube-play" aria-hidden="true"></i></a>
+       </div>
+     </div>
+      <div class="footer-items">
+    <h2 style="color: white;">Feedback</h2>
+    <div class="border"></div>
+    <form action="" method="POST">
+      <input type="text" placeholder="Your name" name="name" required="" value={{request.form.name}}>
+      <input type="email" placeholder="Your email" name="email" required="" value={{request.form.email}}>
+      <textarea type="text" placeholder="Message" name="message" value={{request.form.message}} required></textarea>
+      <input type="submit" name="Submit">
+    </form>
+   </div>
+   </div>
+   <div class="footer-bottom">
+    <ul>
+       <a href="https://www.iitbhilai.ac.in/" target="blank22" style="color: white;"><li>IIT BHILAI</li></a>
+    </ul>
+     
+   </div>
+ </div>
+
+</body>
+</html>

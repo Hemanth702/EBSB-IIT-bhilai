@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+      <div class="page-wrapper">
+    
+<section class="auto-slider">
+            <div id="slider">
+                <figure>
+                    <img src="static/images/hi1.jpeg" alt="Image">
+                    <img src="static/images/hi.jpeg" alt="Image">
+                    <img src="static/images/hi1.jpeg" alt="Image">
+                    <img src="static/images/hi3.jpeg" alt="Image">
+                    <img src="static/images/hi1.jpeg" alt="Image">
+                </figure>
+                <div class="indicator"></div>
+    </div>
+</section>
+
+    <section class="hero-section"  style="margin-bottom: 0rem;">
+  <div class="cgrid">
+    </a>
+    <a class="card" href="{{ url_for('EBSB') }}">
+      <div class="cardbg" style="background-image: url(static/images/iit.png)"></div>
+      <div class="ccontent">
+        <h3 class="textcard"> EBSB</h3>
+      
+      </div>
+    </a>
+    <a class="card" href="{{ url_for('Events') }}">
+      <div class="cardbg" style="background-image: url(static/images/even.jpg)"></div>
+      <div class="ccontent">
+        <h3 class="textcard">EVENTS</h3>
+      
+      </div>
+    </a>
+    <a class="card" href="{{ url_for('Team') }}" >
+      <div class="cardbg" style="background-image: url(static/images/team.jpg)"></div>
+      <div class="ccontent">
+       <h3 class="textcard"> TEAM</h3>
+      </div>
+    </a>
+    </div>
+    </section>
+	
+    </div>
+{% endblock %}
